@@ -1,4 +1,3 @@
-// Wait for the DOM to be fully loaded before executing the JavaScript code
 document.addEventListener("DOMContentLoaded", function () {
   // DOM elements
   const startButton = document.getElementById("start");
@@ -89,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Event listener for the submit button
   submitButton.addEventListener("click", saveScore);
 
-  // Function to save the score
+  // Function to save the score and redirect to highscores.html
   function saveScore() {
     const initials = initialsInput.value.trim();
     if (initials !== "") {
@@ -97,8 +96,8 @@ document.addEventListener("DOMContentLoaded", function () {
       userScores.push(userScore);
       localStorage.setItem("userScores", JSON.stringify(userScores));
 
-      // Save the score or perform any other action as needed
-      console.log(`Initials: ${initials}, Score: ${timeLeft}`);
+      // Redirect to highscores.html after saving the score
+      window.location.href = "highscores.html";
     }
   }
 });
