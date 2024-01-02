@@ -78,7 +78,7 @@ Answer the multiple-choice questions within the time limit.
 Submit your initials to save your score.
 View highscores by clicking the "View Highscores" link.
 
-## Technologies Used
+## Technologies
 
 HTML5
 CSS3
